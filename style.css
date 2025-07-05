@@ -61,3 +61,28 @@ body {
 .btn:hover {
   background-color: #9c478c;
 }
+
+.about-section {
+  padding: 60px 20px;
+  background-color: #fff5fa;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  color: #d63384;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
