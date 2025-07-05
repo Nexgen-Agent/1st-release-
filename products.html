@@ -1,62 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products - Lonz Flawls Aura</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="products.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
+  <div class="aura-bg"></div>
   <header class="navbar">
     <div class="container">
-      <h1 class="logo">Lonz Flawls Aura</h1>
+      <h1 class="logo animate-glow">Lonz Flawls Aura</h1>
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero product-hero">
+  <section class="products-hero animate-fadein">
     <div class="container">
-      <h2>Our Signature Products</h2>
-      <p>Luxury skincare designed to glow through every season</p>
+      <h2 class="neon-text">Radiant Products</h2>
+      <p class="hero-desc">Unleash your glow with futuristic care and luxury.</p>
+    </div>
+    <div class="aura-orb"></div>
+    <div class="hero-art">
+      <svg width="200" height="200" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="110" cy="110" rx="90" ry="40" fill="url(#paint0_radial)" opacity="0.5"/>
+        <ellipse cx="110" cy="110" rx="65" ry="65" fill="url(#paint1_radial)" opacity="0.12"/>
+        <defs>
+          <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientTransform="translate(110 110) scale(90 40)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00ffe7"/>
+            <stop offset="1" stop-color="#3f00ff" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientTransform="translate(110 110) scale(65)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00ffe7"/>
+            <stop offset="1" stop-color="#3f00ff" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+      </svg>
     </div>
   </section>
 
-  <section class="products-grid container">
-    <div class="product-card">
-      <img src="images/whitening-combo.jpg" alt="Whitening Combo">
-      <h3>Whitening Combo</h3>
-      <p>Clear, radiant skin powered by collagen, glutathione and licorice extract.</p>
-      <span class="price">R299</span>
-    </div>
-
-    <div class="product-card">
-      <img src="images/extra-glow-soap.jpg" alt="Extra Glow Soap">
-      <h3>Extra Glow Soap</h3>
-      <p>Turmeric, lemon, and honey blended to awaken your inner light.</p>
-      <span class="price">R149</span>
-    </div>
-
-    <div class="product-card">
-      <img src="images/tissue-oil.jpg" alt="Tissue Oil">
-      <h3>Luxury Tissue Oil</h3>
-      <p>Heals, hydrates, and reveals a luminous you — naturally.</p>
-      <span class="price">R199</span>
+  <section class="products-content animate-slideup">
+    <div class="container products-grid">
+      <!-- Product 1 -->
+      <div class="product-card animate-float">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Radiant Serum">
+        <div class="product-info">
+          <h3 class="card-title">Radiant Serum</h3>
+          <p>Illuminate your skin with potent peptides and a futuristic glow.</p>
+          <button class="glow-btn">Shop Now</button>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card animate-float">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Celestial Moisturizer">
+        <div class="product-info">
+          <h3 class="card-title">Celestial Moisturizer</h3>
+          <p>Hydration meets luxury with cosmic botanicals and timeless aura.</p>
+          <button class="glow-btn">Shop Now</button>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card animate-float">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Starlight Mask">
+        <div class="product-info">
+          <h3 class="card-title">Starlight Mask</h3>
+          <p>Revitalize overnight with a luminous, artful blend of future-forward care.</p>
+          <button class="glow-btn">Shop Now</button>
+        </div>
+      </div>
+      <!-- Add more products as needed -->
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer animate-fadein">
     <div class="container">
       <p>&copy; 2025 Lonz Flawls Aura. All rights reserved.</p>
+      <p>Crafted with care. Inspired by confidence.</p>
     </div>
   </footer>
 
+  <script>
+    // Animate on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      document.querySelectorAll('.animate-fadein, .animate-slideup, .animate-float').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>
