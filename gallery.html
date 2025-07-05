@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery - Lonz Flawls Aura</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="gallery.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
+  <div class="aura-bg"></div>
   <header class="navbar">
     <div class="container">
-      <h1 class="logo">Lonz Flawls Aura</h1>
+      <h1 class="logo animate-glow">Lonz Flawls Aura</h1>
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="products.html">Products</a></li>
           <li><a href="gallery.html" class="active">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -23,27 +23,66 @@
     </div>
   </header>
 
-  <section class="hero gallery-hero">
+  <section class="gallery-hero animate-fadein">
     <div class="container">
-      <h2>Gallery</h2>
-      <p>Experience the beauty. Feel the aura. See the transformation.</p>
+      <h2 class="neon-text">Radiant Gallery</h2>
+      <p class="hero-desc">A showcase of bold confidence, luminous beauty, and futuristic style.</p>
+    </div>
+    <div class="aura-orb"></div>
+  </section>
+
+  <section class="gallery-content animate-slideup">
+    <div class="container gallery-grid">
+      <!-- Sample Gallery Items. Replace src with your images -->
+      <div class="gallery-card animate-float">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Glow 1">
+        <div class="gallery-info">
+          <h3 class="card-title">Luminous Touch</h3>
+          <p>Radiate your confidence with every glow.</p>
+        </div>
+      </div>
+      <div class="gallery-card animate-float">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Glow 2">
+        <div class="gallery-info">
+          <h3 class="card-title">Celestial Skin</h3>
+          <p>Transcend the ordinary—embrace the extraordinary.</p>
+        </div>
+      </div>
+      <div class="gallery-card animate-float">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Glow 3">
+        <div class="gallery-info">
+          <h3 class="card-title">Aura Essence</h3>
+          <p>The art of luxury, the science of glow.</p>
+        </div>
+      </div>
+      <!-- Add more cards as needed -->
     </div>
   </section>
 
-  <section class="gallery-grid container">
-    <div class="gallery-item"><img src="images/product1.jpg" alt="Whitening Soap"/></div>
-    <div class="gallery-item"><img src="images/product2.jpg" alt="Extra Glow Lotion"/></div>
-    <div class="gallery-item"><img src="images/product3.jpg" alt="Tissue Oil"/></div>
-    <div class="gallery-item"><img src="images/lifestyle1.jpg" alt="Radiant Skin"/></div>
-    <div class="gallery-item"><img src="images/lifestyle2.jpg" alt="Client Results"/></div>
-    <div class="gallery-item"><img src="images/behindscene.jpg" alt="Behind the Scenes"/></div>
-  </section>
-
-  <footer class="footer">
+  <footer class="footer animate-fadein">
     <div class="container">
       <p>&copy; 2025 Lonz Flawls Aura. All rights reserved.</p>
+      <p>Crafted with care. Inspired by confidence.</p>
     </div>
   </footer>
 
+  <script>
+    // Animate on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      document.querySelectorAll('.animate-fadein, .animate-slideup, .animate-float').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>
