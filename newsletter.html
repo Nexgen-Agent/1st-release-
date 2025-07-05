@@ -1,55 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Join the Aura Club – Lonz Flawls Aura</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter - Lonz Flawls Aura</title>
+  <link rel="stylesheet" href="newsletter.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
+  <div class="aura-bg"></div>
   <header class="navbar">
     <div class="container">
-      <h1 class="logo">Lonz Flawls Aura</h1>
+      <h1 class="logo animate-glow">Lonz Flawls Aura</h1>
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="newsletter.html" class="active">Newsletter</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="newsletter.html" class="active">Newsletter</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero newsletter-hero">
+  <section class="newsletter-hero animate-fadein">
     <div class="container">
-      <h2>Join the Aura Club</h2>
-      <p>Exclusive offers. Private invites. First access to beauty drops.</p>
+      <h2 class="neon-text">Join the Lonz Flawls Aura Newsletter</h2>
+      <p class="hero-desc">Stay radiant. Get exclusive updates, beauty tips, and special offers delivered to your inbox.</p>
+    </div>
+    <div class="aura-orb"></div>
+    <div class="hero-art">
+      <svg width="200" height="200" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="110" cy="110" rx="90" ry="40" fill="url(#paint0_radial)" opacity="0.5"/>
+        <ellipse cx="110" cy="110" rx="65" ry="65" fill="url(#paint1_radial)" opacity="0.12"/>
+        <defs>
+          <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientTransform="translate(110 110) scale(90 40)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00ffe7"/>
+            <stop offset="1" stop-color="#3f00ff" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientTransform="translate(110 110) scale(65)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00ffe7"/>
+            <stop offset="1" stop-color="#3f00ff" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+      </svg>
     </div>
   </section>
 
-  <section class="newsletter-form container">
-    <form action="#" method="POST">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
+  <section class="newsletter-content animate-slideup">
+    <div class="container">
+      <form class="newsletter-form glass">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required autocomplete="off" placeholder="you@email.com">
 
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="skintype">Skin Type (Optional)</label>
-      <input type="text" id="skintype" name="skintype" placeholder="e.g., Dry, Oily, Combination">
-
-      <button type="submit" class="submit-btn">Join the Aura</button>
-    </form>
+        <button type="submit" class="glow-btn">Subscribe Now</button>
+      </form>
+      <div class="newsletter-benefits">
+        <div class="benefit-card animate-float">
+          <h3 class="neon-text">Exclusive Offers</h3>
+          <p>Access members-only discounts and early launches.</p>
+        </div>
+        <div class="benefit-card animate-float">
+          <h3 class="neon-text">Insider Beauty Tips</h3>
+          <p>Glow up with curated advice from our team of experts.</p>
+        </div>
+        <div class="benefit-card animate-float">
+          <h3 class="neon-text">Aura Inspiration</h3>
+          <p>Stay inspired by stories, art, and confidence-boosting features.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer animate-fadein">
     <div class="container">
       <p>&copy; 2025 Lonz Flawls Aura. All rights reserved.</p>
+      <p>Crafted with care. Inspired by confidence.</p>
     </div>
   </footer>
 
+  <script>
+    // Animate on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      document.querySelectorAll('.animate-fadein, .animate-slideup, .animate-float').forEach(el => {
+        observer.observe(el);
+      });
+    });
+
+    // Newsletter fake submit
+    document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for subscribing to the Lonz Flawls Aura newsletter!');
+      this.reset();
+    });
+  </script>
 </body>
 </html>
