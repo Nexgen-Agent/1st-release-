@@ -223,3 +223,35 @@ html {
 .footer p {
   margin: 5px 0;
 }
+
+.about-hero {
+  background-color: #fff0f5;
+  color: #d63384;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-hero h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #b1276f;
+}
+
+.about-content {
+  background-color: #fff;
+  padding: 60px 20px;
+  color: #333;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.about-content h3 {
+  font-size: 2rem;
+  color: #d63384;
+  margin-bottom: 20px;
+}
