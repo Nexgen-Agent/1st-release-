@@ -1,109 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lonz Flawls Aura</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
+  <div class="aura-bg"></div>
+  <header class="navbar">
     <div class="container">
-      <img src="logo.png" alt="Lonz Flawls Aura Logo" class="logo" />
-      <nav class="nav">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Products</a>
-        <a href="#">Glow Tips</a>
-        <a href="#">Contact</a>
+      <h1 class="logo animate-glow">Lonz Flawls Aura</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <section id="about" class="about-section">
+  <section class="hero animate-fadein">
     <div class="container">
-      <h2>About Lonz Flawls Aura</h2>
-      <p>
-        Rooted in elegance and innovation, Lonz Flawls Aura is more than skincare — it’s a statement of beauty, power, and self-worth. 
-        Our handcrafted blends are designed to reveal your natural glow and nurture your skin with rich, luxurious care.
-      </p>
+      <h2 class="neon-text">Glow Beyond Tomorrow</h2>
+      <p class="hero-desc">Unapologetic luxury, timeless confidence, radiant skin.<br>
+        Welcome to the future of Lonz Flawls Aura.</p>
+      <a href="about.html" class="glow-btn">Discover More</a>
+    </div>
+    <div class="aura-orb"></div>
+    <div class="hero-art">
+      <!-- Futuristic SVG Art Accent -->
+      <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="110" cy="110" rx="100" ry="48" fill="url(#paint0_radial)" opacity="0.5"/>
+        <ellipse cx="110" cy="110" rx="80" ry="80" fill="url(#paint1_radial)" opacity="0.13"/>
+        <ellipse cx="110" cy="110" rx="55" ry="55" fill="url(#paint2_radial)" opacity="0.5"/>
+        <defs>
+          <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientTransform="translate(110 110) scale(100 48)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00ffe7"/>
+            <stop offset="1" stop-color="#3f00ff" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientTransform="translate(110 110) scale(80)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#00ffe7"/>
+            <stop offset="1" stop-color="#3f00ff" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="paint2_radial" cx="0" cy="0" r="1" gradientTransform="translate(110 110) scale(55)" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#ffffff"/>
+            <stop offset="1" stop-color="#3f00ff" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+      </svg>
     </div>
   </section>
 
-  <section id="products" class="products-section">
-    <div class="container">
-      <h2>Our Signature Products</h2>
-      <div class="product-grid">
-
-        <div class="product-card">
-          <img src="images/whitening-oil.jpg" alt="Whitening Oil">
-          <h3>Whitening Oil</h3>
-          <p>Brighten, smooth, and nourish your skin with our ultra-luxurious blend.</p>
-        </div>
-
-        <div class="product-card">
-          <img src="images/glow-soap.jpg" alt="Extra Glow Soap">
-          <h3>Extra Glow Soap</h3>
-          <p>Reveal your radiant skin with deep moisture and natural ingredients.</p>
-        </div>
-
-        <div class="product-card">
-          <img src="images/whitening-cream.jpg" alt="Whitening Cream">
-          <h3>Whitening Cream</h3>
-          <p>Target dark spots and hydrate deeply with our elite skincare formula.</p>
-        </div>
-
+  <section class="features animate-slideup">
+    <div class="container features-grid">
+      <div class="feature-card animate-float">
+        <h3 class="neon-text">Timeless Luxury</h3>
+        <p>Every formula is crafted to evoke elegance, precision, and beauty—today and beyond.</p>
+      </div>
+      <div class="feature-card animate-float">
+        <h3 class="neon-text">Futuristic Science</h3>
+        <p>Cutting-edge ingredients meet ancient wisdom for results that transcend trends.</p>
+      </div>
+      <div class="feature-card animate-float">
+        <h3 class="neon-text">Confidence Unleashed</h3>
+        <p>Wear your glow like an aura. Lonz Flawls empowers you to radiate unapologetically.</p>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials Section: Inserted here -->
-  <section id="testimonials" class="testimonials-section">
+  <footer class="footer animate-fadein">
     <div class="container">
-      <h2>What Our Clients Say</h2>
-      <div class="testimonial-grid">
-
-        <div class="testimonial-card">
-          <p>"I've tried everything before, but nothing made my skin feel this luxurious. Lonz Flawls Aura is my new obsession."</p>
-          <h4>– Naledi M.</h4>
-        </div>
-
-        <div class="testimonial-card">
-          <p>"In just a week, my skin looked brighter, healthier, and more alive. This brand is pure magic."</p>
-          <h4>– Lesego P.</h4>
-        </div>
-
-        <div class="testimonial-card">
-          <p>"The glow is unreal. It feels like I finally found the secret to flawless skin. Highly recommend."</p>
-          <h4>– Ayanda K.</h4>
-        </div>
-
-      </div>
+      <p>&copy; 2025 Lonz Flawls Aura. All rights reserved.</p>
+      <p>Crafted with care. Inspired by confidence.</p>
     </div>
-  </section>
+  </footer>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Glow Begins Here</h1>
-      <p>Luxury Skincare Born from Confidence & Class.</p>
-      <a href="#" class="btn">Explore The Aura</a>
-    </div>
-  </section>
-
-<section id="contact" class="contact-section">
-  <div class="container">
-    <h2>Get In Touch</h2>
-    <p>Have a question or want to place an order? We’re just a message away.</p>
-    <a href="https://wa.me/27735511216" target="_blank" class="contact-btn">Message on WhatsApp</a>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2025 Lonz Flawls Aura. All rights reserved.</p>
-    <p>Crafted with care. Inspired by confidence.</p>
-  </div>
-</footer>
-
+  <script>
+    // Animate on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      document.querySelectorAll('.animate-fadein, .animate-slideup, .animate-float').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>
